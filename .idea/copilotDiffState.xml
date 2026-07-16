@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="/LoginSteps (snapshot).java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/LoginSteps (snapshot).java" />
+              <option name="originalContent" value="package com.framework.stepdefinitions;&#10;&#10;import com.framework.factory.DriverFactory;&#10;import com.framework.utils.ConfigReader;&#10;import io.cucumber.java.en.Given;&#10;&#10;public class LoginSteps {&#10;&#10;    @Given(&quot;User launches application&quot;)&#10;    public void userLaunchesApplication() {&#10;&#10;        DriverFactory.getDriver()&#10;                .get(ConfigReader.get(&quot;url&quot;));&#10;    }&#10;}" />
+              <option name="updatedContent" value="package com.framework.stepdefinitions;&#10;&#10;import com.framework.factory.DriverFactory;&#10;import com.framework.utils.ConfigReader;&#10;import io.cucumber.java.en.Given;&#10;import io.cucumber.java.en.When;&#10;import io.cucumber.java.en.And;&#10;import io.cucumber.java.en.Then;&#10;&#10;public class LoginSteps {&#10;&#10;    @Given(&quot;User launches application&quot;)&#10;    public void userLaunchesApplication() {&#10;&#10;        DriverFactory.getDriver()&#10;                .get(ConfigReader.get(&quot;url&quot;));&#10;    }&#10;&#10;    @When(&quot;User enters username {string}&quot;)&#10;    public void userEntersUsername(String username) {&#10;        // TODO: Implement username input logic&#10;        // Example: driver.findElement(By.id(&quot;username&quot;)).sendKeys(username);&#10;    }&#10;&#10;    @And(&quot;User enters password {string}&quot;)&#10;    public void userEntersPassword(String password) {&#10;        // TODO: Implement password input logic&#10;        // Example: driver.findElement(By.id(&quot;password&quot;)).sendKeys(password);&#10;    }&#10;&#10;    @And(&quot;User clicks login button&quot;)&#10;    public void userClicksLoginButton() {&#10;        // TODO: Implement login button click logic&#10;        // Example: driver.findElement(By.id(&quot;login&quot;)).click();&#10;    }&#10;&#10;    @Then(&quot;User should navigate to dashboard&quot;)&#10;    public void userShouldNavigateToDashboard() {&#10;        // TODO: Implement dashboard verification logic&#10;        // Example: assert driver.getCurrentUrl().contains(&quot;dashboard&quot;);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/TestRunner (snapshot).java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/TestRunner (snapshot).java" />
+              <option name="originalContent" value="package com.framework.runners;&#10;&#10;import io.cucumber.testng.AbstractTestNGCucumberTests;&#10;import io.cucumber.testng.CucumberOptions;&#10;import org.testng.annotations.DataProvider;&#10;&#10;@CucumberOptions(&#10;        features = {&quot;src/test/resources/features&quot;},&#10;&#10;        glue = {&#10;                &quot;com.framework.hooks&quot;,&#10;                &quot;com.framework.stepdefinitions&quot;&#10;        },&#10;        plugin = {&#10;                &quot;pretty&quot;,&#10;                &quot;html:target/cucumber-report.html&quot;,&#10;                &quot;json:target/cucumber.json&quot;,&#10;                &quot;io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm&quot;&#10;        },&#10;        monochrome = true,&#10;        publish = true&#10;)&#10;public class TestRunner extends AbstractTestNGCucumberTests {&#10;    @Override&#10;    @DataProvider(parallel = false)&#10;    public Object[][] scenarios() {&#10;        return super.scenarios();&#10;    }&#10;}" />
+              <option name="updatedContent" value="package com.framework.runners;&#10;&#10;import io.cucumber.testng.AbstractTestNGCucumberTests;&#10;import io.cucumber.testng.CucumberOptions;&#10;import org.testng.annotations.DataProvider;&#10;&#10;@CucumberOptions(&#10;        features = {&quot;src/test/resources/features&quot;},&#10;&#10;        glue = {&#10;                &quot;com.framework.hooks&quot;,&#10;                &quot;com.framework.stepdefinitions&quot;&#10;        },&#10;        tags = &quot;@Regression&quot;,&#10;        plugin = {&#10;                &quot;pretty&quot;,&#10;                &quot;html:target/cucumber-report.html&quot;,&#10;                &quot;json:target/cucumber.json&quot;,&#10;                &quot;io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm&quot;&#10;        },&#10;        monochrome = true,&#10;        publish = true&#10;)&#10;public class TestRunner extends AbstractTestNGCucumberTests {&#10;    @Override&#10;    @DataProvider(parallel = false)&#10;    public Object[][] scenarios() {&#10;        return super.scenarios();&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
